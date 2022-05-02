@@ -50,7 +50,7 @@ public class Squad {
     public static void clearAllSquad(){
         instances.clear();
     }
-    public static Squad findById(int id){
+    public static Squad findBySquadId(int id){
         return instances.get(id-1);
     }
     public void clearAllMember(){

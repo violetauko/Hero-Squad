@@ -18,6 +18,12 @@ class SquadTest {
     }
 
     @Test
+    public void newSquadInstantiatesCorrectly_true() {
+        Squad squad = Squad.setUpNewSquad();
+        assertTrue(squad instanceof Squad);
+    }
+
+    @Test
     void newSquadgetName_true() throws Exception {
         Squad squad =Squad.setUpNewSquad();
         assertEquals("Justice",squad.getName());
@@ -51,18 +57,36 @@ class SquadTest {
     }
 
     @Test
-    void setMember() {
+    void setMember() throws Exception{
+        Hero.clearAllHeroes();
+        Hero hero = Hero.setUpNewHero();
+        Squad.setMember(hero);
+        assertEquals(1,Squad.getMember().get(0).getId());
+
+
     }
 
     @Test
-    void getMember() {
+    void getMember() throws Exception{
+        Squad squad =Squad.setUpNewSquad();
+        Hero hero = Hero.setUpNewHero();
+        squad.setMember(hero);
+        assertEquals("SuperMan",Squad.getMember().get(0).getName());
+
+
     }
 
     @Test
-    void clearAllSquad() {
+    void findBySquadId() {
+        Squad squad =Squad.setUpNewSquad();
+        assertEquals(1, Squad.findBySquadId(squad.getSquadId()).getSquadId());
+    } @Test
+    public void addMember_addsHeroMemberToSquad(){
+        Hero hero = Hero.setUpNewHero();
+        Squad squad = Squad.findBySquadId(0);
+        squad.clearAllMember();
+        squad.getMember().add(hero);
+        assertEquals(1,squad.getMember().size());
     }
 
-    @Test
-    void findById() {
-    }
 }
