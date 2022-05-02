@@ -67,5 +67,34 @@ class HeroTest {
         Hero hero = Hero.setUpNewHero();
         assertEquals(1, Hero.findById(hero.getId()).getId());
     }
+    @Test
+    void update()throws Exception {
+        Hero hero = Hero.setUpNewHero();
+        String formerName = hero.getName();
+        int formerId = hero.getId();
+        String formerSpecialPower = hero.getSpecialPower();
+        String formerWeakness = hero.getWeakness();
+        int formerAge = hero.getAge();
 
-}
+        hero.update("Superman",24,"lazers","fire");
+        assertEquals(formerId, hero.getId());
+        assertNotEquals(formerName, hero.getName());
+        assertNotEquals(formerSpecialPower, hero.getSpecialPower());
+        assertNotEquals(formerWeakness, hero.getWeakness());
+        assertNotEquals(formerAge, hero.getAge());
+
+
+
+
+    }
+    @Test
+    void deleteSpecificHero() throws Exception {
+        Hero hero = Hero.setUpNewHero();
+        Hero anotherHero = new Hero("Flash",27,"SuperSpeed","fatigue");
+        hero.deleteHero();
+        assertEquals(1, Hero.getAll().size());
+        assertEquals(Hero.getAll().get(0).getId(), 2);
+
+
+    }
+    }
