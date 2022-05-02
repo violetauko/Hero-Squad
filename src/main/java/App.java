@@ -69,6 +69,7 @@ public class App {
             Squad squad = new Squad(name,cause,size);
             request.session().attribute("item",name);
             model.put("item",request.session().attribute("item"));
+            model.put("squad",squad);
             return new ModelAndView(model,"squad-detail.hbs");
         }, new HandlebarsTemplateEngine());
 
