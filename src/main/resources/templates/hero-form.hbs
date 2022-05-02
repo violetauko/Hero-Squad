@@ -1,6 +1,8 @@
 {{#partial "content"}}
 
+
     <h1>Create a Hero</h1>
+
    <form class="form" action="/hero/new" method="post">
             <input type="text" placeholder="Enter your hero's name" name="name" required>
             <input type="number" placeholder="Enter your hero's age" name="age" required>
@@ -9,5 +11,7 @@
 
             <input class="btn" type="submit">
         </form>
+
+
 {{/partial}}
 {{> layout.hbs}}
