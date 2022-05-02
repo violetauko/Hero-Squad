@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="models.HeroTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2022-05-02T15:28:35" hostname="violet-HP-EliteBook-840-G3" time="0.074">
+<testsuite name="models.HeroTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-05-02T16:22:01" hostname="violet-HP-EliteBook-840-G3" time="0.025">
   <properties/>
-  <testcase name="newHeroInstantiatesCorrectly_true()" classname="models.HeroTest" time="0.035"/>
-  <testcase name="newHerogetName_true()" classname="models.HeroTest" time="0.008"/>
-  <testcase name="newHerogetId_true()" classname="models.HeroTest" time="0.003"/>
-  <testcase name="findById()" classname="models.HeroTest" time="0.001"/>
-  <testcase name="nwHerogetWeakness_true()" classname="models.HeroTest" time="0.002"/>
-  <testcase name="newHerogetAge_true()" classname="models.HeroTest" time="0.003"/>
-  <testcase name="newHerogetAll_true()" classname="models.HeroTest" time="0.003"/>
-  <testcase name="newHerogetSpecialPower_true()" classname="models.HeroTest" time="0.003"/>
+  <testcase name="newHerogetAll_true()" classname="models.HeroTest" time="0.025"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

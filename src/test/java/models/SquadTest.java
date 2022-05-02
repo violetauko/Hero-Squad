@@ -14,26 +14,40 @@ class SquadTest {
 
     @AfterEach
     void tearDown() {
+        Squad.clearAllSquad();
     }
 
     @Test
-    void getName() {
+    void newSquadgetName_true() throws Exception {
+        Squad squad =Squad.setUpNewSquad();
+        assertEquals("Justice",squad.getName());
     }
 
     @Test
-    void getCause() {
+    void newSquadgetCause_true() throws Exception {
+        Squad squad =Squad.setUpNewSquad();
+        assertEquals("Justice",squad.getCause());
     }
 
     @Test
-    void getSize() {
+    void newSquadgetSize_int()throws Exception {
+        Squad squad =Squad.setUpNewSquad();
+        assertEquals(10,squad.getSize());
     }
 
     @Test
-    void getSquadId() {
+    void newSquadgetSquadId_true() throws Exception {
+        Squad.clearAllSquad();
+        Squad squad =Squad.setUpNewSquad();
+        assertEquals(1,squad.getSquadId());
     }
 
     @Test
-    void getInstances() {
+    void newSquadgetInstances_true() throws Exception {
+        Squad squad =Squad.setUpNewSquad();
+        Squad squad2= new Squad("Guners","fightCorruption",10);
+        assertTrue(Squad.getInstances().contains(squad));
+        assertTrue(Squad.getInstances().contains(squad2));
     }
 
     @Test

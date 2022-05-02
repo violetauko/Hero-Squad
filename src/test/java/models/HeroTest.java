@@ -59,7 +59,7 @@ class HeroTest {
     void newHerogetAll_true() throws Exception{
         Hero hero = Hero.setUpNewHero();
         Hero anotherHero = new Hero("Flash",27,"SuperSpeed","fatigue");
-        assertEquals(2, Hero.getAll().size());
+        assertEquals(2, hero.getAll().size());
     }
 
     @Test
