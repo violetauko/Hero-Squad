@@ -1,17 +1,37 @@
 {{#partial "content"}}
 
-    <h3>Congratulations you have created a new squad</h3>
-
-
-        <div class="container">
-            <p>Name: {{squad.name}}</p>
-            <p>Cause: {{squad.cause}}</p>
-            <p>Maximum size: {{squad.size}}</p>
+    {{#each squads}}
+        <div class="squad-cont">
+        <div>
+            <h1>{{ name }} </h1>
+            <p>Purpose: {{cause}}</p>
+            <p>Max participants: {{ size }}</p>
+            <p>Id: {{squadId}}</p>
+            <br><br>
+            <h5>Members of {{name}} Squad</h5>
+        {{#each members}}
+                <div class="member-cont">
+                    <h5>Name: {{this.name}}</h5>
+                    <h5>Power: {{power}}</h5>
+                    <Button class="btns">Remove</Button>
+                </div>
+        {{/each}}
         </div>
-    <a href="/squad-form"><button>Create a new Squad</button></a>
-
+        </div>
+        {{/each}}
+<div class="squad">
+    <div id="newMember">
+        {{#each heroes}}
+            <div class="hero-item">
+                <img src="/img/DIAMONDHEAD06_4C.png" alt="">
+                <div class="hero-detail">
+                    <p>Name: {{name}}</p>
+                    <p>Super power: {{ specialPower }}</p>
+                </div>
+            </div>
+        {{/each}}
     </div>
-    </div>
+</div>
 {{/partial}}
 
 {{> layout.hbs}}

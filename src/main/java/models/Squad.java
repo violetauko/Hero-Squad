@@ -9,13 +9,13 @@ public class Squad {
     private int size;
     private int SquadId;
     private static ArrayList<Squad> instances = new ArrayList<>();
-    private static ArrayList<Hero> member = new ArrayList<>();
+    private static ArrayList<Hero> members = new ArrayList<>();
 
     public Squad(String name, String cause, int size) {
         this.name = name;
         this.cause = cause;
         this.size = size;
-        this.member = new ArrayList<>();
+        this.members = new ArrayList<>();
         instances.add(this);
         this.SquadId = instances.size();
     }
@@ -41,11 +41,11 @@ public class Squad {
     }
 
     public static void setMember(Hero newMember) {
-        member.add(newMember);
+        members.add(newMember);
     }
 
-    public static ArrayList<Hero> getMember() {
-        return member;
+    public static ArrayList<Hero> getMembers() {
+        return members;
     }
     public static void clearAllSquad(){
         instances.clear();
@@ -54,7 +54,7 @@ public class Squad {
         return instances.get(id-1);
     }
     public void clearAllMember(){
-        getMember().clear();
+        getMembers().clear();
     }
 
     public static Squad setUpNewSquad(){

@@ -4,17 +4,16 @@
 
         <h2> Here is Your Hero</h2>
         <div class="heroes">
-
+    {{#each hero}}
                 <div class="hero-item">
-
-                    <p>Name: {{hero.name}}</p>
-                    <p>Age: {{hero.age}}</p>
-                    <p>Special power: {{hero.specialPower}}</p>
-                    <p>Weakness: {{hero.weakness}}</p>
-                    <p>Id: {{ hero.id }}</p>
-                    <button><a href="/squad-detail" class="btn">Add hero To Squad</a></button>
-
+                    <p>Name: {{name}}</p>
+                    <p>Age: {{age}}</p>
+                    <p>Special power: {{specialPower}}</p>
+                    <p>Weakness: {{weakness}}</p>
+                    <p>Id: {{ id }}</p>
+                    <a href="/squad-detail" class="btn">Assign Squad</a>
                 </div>
+        {{/each}}
 
         </div>
     <a href="/hero-form"><button>Create a new Hero</button></a>

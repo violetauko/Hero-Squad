@@ -8,6 +8,29 @@
         <p>Cause: {{squad.cause}}</p>
         <p>Maximum size: {{squad.size}}</p>
     </div>
+    <div class="squad">
+        <div id="newMember">
+            <p class="close">&cross;</p>
+            <h2>Choose Squad Members</h2>
+            {{#each heroes}}
+                <div class="hero-item">
+                    <div class="hero-detail">
+                        <p>Name: {{hero.name}}</p>
+                        <p>Super power: {{ hero.specialPower }}</p>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+<!--                <div class="hero-item">-->
+<!--                    <img src="/img/DIAMONDHEAD06_4C.png" alt="">-->
+<!--                    <div class="hero-detail">-->
+<!--                        <p>Name: {{name}}</p>-->
+<!--                        <p>Super power: {{ power }}</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+        </div>
+        </div>
+    </div>
 
     {{/partial}}
 

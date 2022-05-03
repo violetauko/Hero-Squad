@@ -61,17 +61,17 @@ class SquadTest {
         Hero.clearAllHeroes();
         Hero hero = Hero.setUpNewHero();
         Squad.setMember(hero);
-        assertEquals(1, Squad.getMember().get(0).getId());
+        assertEquals(1, Squad.getMembers().get(0).getId());
 
 
     }
 
     @Test
-    void getMember() throws Exception {
+    void getMembers() throws Exception {
         Squad squad = Squad.setUpNewSquad();
         Hero hero = Hero.setUpNewHero();
         squad.setMember(hero);
-        assertEquals("SuperMan", Squad.getMember().get(0).getName());
+        assertEquals("SuperMan", Squad.getMembers().get(0).getName());
 
 
     }

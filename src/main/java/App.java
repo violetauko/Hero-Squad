@@ -45,7 +45,7 @@ public class App {
             req.session().attribute("item",name);
             model.put("item",req.session().attribute("item"));
             model.put("hero",hero);
-            return new ModelAndView(model, "hero-detail.hbs");
+            return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
 
         get("/squad-form",(req, res) ->{
@@ -56,11 +56,11 @@ public class App {
         get("/squad-detail",(req, res) ->{
             Map<String, Object> model = new HashMap<>();
             ArrayList<Squad> squads = Squad.getInstances();
-            model.put("squad",squads);
-            ArrayList<Hero> member = Hero.getAll();
-            model.put("hero",member);
+            model.put("squads",squads);
+            ArrayList<Hero> members = Hero.getAll();
+            model.put("heroes",members);
             Squad squad = Squad.findBySquadId(1);
-            model.put("member", squad.getMember());
+            model.put("allSquadMembers", squad.getMembers());
             return new ModelAndView(model, "squad-detail.hbs");
         }, new HandlebarsTemplateEngine());
 
@@ -73,7 +73,7 @@ public class App {
             request.session().attribute("item",name);
             model.put("item",request.session().attribute("item"));
             model.put("squad",squad);
-            return new ModelAndView(model,"squad-detail.hbs");
+            return new ModelAndView(model,"success.hbs");
         }, new HandlebarsTemplateEngine());
 
         get("/new/member/:squadId",(request,response)->{
@@ -81,7 +81,7 @@ public class App {
             request.session().attribute("selectedSquad",request.params("squadId"));
             model.put("selectedSquad", request.session().attribute("selectedSquad"));
             model.put("item",1);
-            return new ModelAndView(model, "squad-member.hbs");
+            return new ModelAndView(model, "success.hbs");
         },new HandlebarsTemplateEngine());
 
         post("/squad/new/:id",(req,res)->{
@@ -92,7 +92,7 @@ public class App {
             squad.setMember(hero);
             model.put("item", hero.getName());
             model.put("hero",squad.getName());
-            return new ModelAndView(model, "squad-member.hbs");
+            return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
 
     }
