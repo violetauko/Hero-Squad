@@ -1,25 +1,24 @@
 {{#partial "content"}}
 
-
-    <h1 class="text-center">Create a Hero</h1>
-  <div class="container">
+  <div class="container-fluid">
       <div class="hero-form">
+          <h1 class="mb-5">Create a Hero</h1>
   <form class="form" action="/hero/new" method="post">
-      <div class="mb-5">
+      <div class="mb-5 ">
            <label for="name">Name:</label>
-           <input type="text" placeholder="Enter hero's name" name="name" required>
+           <input type="text" id="name" placeholder="Enter hero's name" name="hero name" required>
       </div>
           <div class="mb-5">
               <label for="age">Age:</label>
-              <input type="number" placeholder="Enter hero's age" name="age" required>
+              <input type="number" id="age"placeholder="Enter hero's age" name="hero age" required>
           </div>
               <div class="mb-5">
                   <label for="specialPowers">Powers:</label>
-                  <input type="text" placeholder="Enter hero's specialPowers" name="specialPower" required>
+                  <input type="text" id="specialPowers" placeholder="Enter hero's specialPowers" name="hero specialPower" required>
               </div>
                    <div class="mb-5">
                        <label for="weakness">Weakness:</label>
-                       <input type="text" placeholder="Enter hero's weakness" name="weakness" required>
+                       <input type="text" id="weakness" placeholder="Enter hero's weakness" name="hero weakness" required>
                    </div>
 
             <input class="btn" type="submit">
