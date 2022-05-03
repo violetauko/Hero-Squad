@@ -13,6 +13,9 @@ import static spark.Spark.staticFileLocation;
 public class App {
     public static void main(String[] args) {
         staticFileLocation("/public");
+        Squad.setUpNewSquad();
+        Hero.setUpNewHero();
+
 
 
         get("/", (request, response) -> {
@@ -78,18 +81,18 @@ public class App {
             request.session().attribute("selectedSquad",request.params("squadId"));
             model.put("selectedSquad", request.session().attribute("selectedSquad"));
             model.put("item",1);
-            return new ModelAndView(model, "squad-detail.hbs");
+            return new ModelAndView(model, "squad-member.hbs");
         },new HandlebarsTemplateEngine());
 
-        get("/squad/new/:id",(req,res)->{
+        post("/squad/new/:id",(req,res)->{
             Map<String, Object> model = new HashMap<>();
-            int id= Integer.parseInt(req.params(":id"));
+            int id= Integer.parseInt(req.params("id"));
             Hero hero = Hero.findById(id);
             Squad squad = Squad.findBySquadId(1);
             squad.setMember(hero);
             model.put("item", hero.getName());
             model.put("hero",squad.getName());
-            return new ModelAndView(model, "squad-detail.hbs");
+            return new ModelAndView(model, "squad-member.hbs");
         }, new HandlebarsTemplateEngine());
 
     }

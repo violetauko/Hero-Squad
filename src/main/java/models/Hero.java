@@ -50,13 +50,6 @@ public class Hero {
         return instances.get(id-1);
     }
 
-    public void update(String name,int age,String specialPower,String weakness) {
-        this.name = name;
-        this.age = age;
-        this.specialPower = specialPower;
-        this.weakness= weakness;
-
-    }
     public void deleteHero(){
         instances.remove(id-1);
     }
