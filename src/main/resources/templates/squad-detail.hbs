@@ -8,14 +8,9 @@
             <p>Cause: {{squad.cause}}</p>
             <p>Maximum size: {{squad.size}}</p>
         </div>
+    <a href="/squad-form"><button>Create a new Squad</button></a>
 
-    <h2>Add Hero to squad/h2>
-    {{#each heroes}}
-        <div class="hero-item">
-                <p>Name: {{hero.name}}</p>
-                <p>Special power: {{ hero.specialPower }}</p>
-                <a class="btn" href="/squad/new/{{id}}">Add Hero To Squad</a>
-      {{/each}}
+    </div>
     </div>
 {{/partial}}
 

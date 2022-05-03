@@ -88,7 +88,7 @@ public class App {
             Squad squad = Squad.findBySquadId(1);
             squad.setMember(hero);
             model.put("item", hero.getName());
-            model.put("newHero",squad.getName());
+            model.put("hero",squad.getName());
             return new ModelAndView(model, "squad-detail.hbs");
         }, new HandlebarsTemplateEngine());
 
