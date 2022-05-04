@@ -35,11 +35,12 @@ background-color:white;
 border-radius:30px;
 padding:10px;
 margin-left:25%;
+
 }
 .index>a:hover{
 background-color:#EC833B;
-
 }
+
 .hero-form{
 color:#EC833B;
 margin-left:30%;
