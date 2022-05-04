@@ -1,0 +1,29 @@
+{{#partial "content"}}
+
+    <div class="container-fluid">
+    {{#each squads}}
+        <div class="squad-detail">
+            <h3>Squad Details</h3><br>
+            <p>Squad Name:{{ name }} </p>
+            <p>Cause: {{cause}}</p>
+            <p>Max Members: {{ size }}</p>
+            <p>Id: {{squadId}}</p>
+            <br><br>
+            <h5>Members of {{name}} Squad</h5>
+        </div>
+        {{/each}}
+   <div class="squad-member">
+        {{#each heroes}}
+                <div class="hero-detail">
+                    <p>Name: {{name}}</p>
+                    <p>Age: {{age}}</p>
+                    <p>Special power: {{specialPower}}</p>
+                    <p>Weakness: {{weakness}}</p>
+                </div>
+        {{/each}}
+    </div>
+    </div>
+
+{{/partial}}
+
+{{> layout.hbs}}

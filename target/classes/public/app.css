@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;400&display=swap');
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Libre Franklin', sans-serif;
+background:rgb(28,27,46);
+}
+navbar{
+font-size:1.5em;
+
+}
+navbar a:hover{
+background-color:white;
+}
+.index>h2{
+color:#EC833B;
+
+}
+.index>h3{
+font-size:3em;
+color:#EC833B;
+}
+
+.index>h1{
+font-size:4em;
+color:#EC833B;
+text-shadow:3px 3px;
+font-weight:bold;
+margin-left:5%;
+}
+
+.index>a{
+background-color:white;
+border-radius:30px;
+padding:10px;
+margin-left:25%;
+}
+.index>a:hover{
+background-color:#EC833B;
+
+}
+.hero-form{
+color:#EC833B;
+margin-left:30%;
+}
+input[type=text]{
+width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color:white;
+}
+input[type=number]{
+width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color:white;
+}
+input[type=submit] {
+  width: 20%;
+  background-color: white;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+input[type=submit]:hover{
+background-color:#EC833B;
+}
+.squad-form{
+color:#EC833B;
+margin-left:30%;
+}
+.success{
+color:white;
+text-align:center;
+padding-top:10%;
+}
+.success>a{
+background-color:#EC833B;
+border-radius:30px;
+padding:10px;
+font-size:2em;
+}
+.success>a:hover{
+background-color:white;
+}
+.hero-detail{
+color:white;
+text-align:center;
+}
+.shadow>a{
+background-color:#EC833B;
+border-radius:30px;
+padding:8px;
+}
+.shadow>a:hover{
+background-color:white;
+}
+.hero-btn>a{
+background-color:#EC833B;
+border-radius:30px;
+padding:10px;
+}
+.squad-detail{
+color:white;
+text-align:center;
+}
+h3{
+color:#EC833B;
+}
+

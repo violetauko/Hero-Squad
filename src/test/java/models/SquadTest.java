@@ -24,25 +24,25 @@ class SquadTest {
     }
 
     @Test
-    void newSquadgetName_true() throws Exception {
+    void newSquadgetName_String() throws Exception {
         Squad squad = Squad.setUpNewSquad();
         assertEquals("Justice", squad.getName());
     }
 
     @Test
-    void newSquadgetCause_true() throws Exception {
+    void newSquadgetCause_String() throws Exception {
         Squad squad = Squad.setUpNewSquad();
         assertEquals("Justice", squad.getCause());
     }
 
     @Test
-    void newSquadgetSize_int() throws Exception {
+    void newSquadgetSize_Int() throws Exception {
         Squad squad = Squad.setUpNewSquad();
         assertEquals(10, squad.getSize());
     }
 
     @Test
-    void newSquadgetSquadId_true() throws Exception {
+    void newSquadgetSquadId_Int() throws Exception {
         Squad.clearAllSquad();
         Squad squad = Squad.setUpNewSquad();
         assertEquals(1, squad.getSquadId());

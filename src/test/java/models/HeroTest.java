@@ -24,31 +24,31 @@ class HeroTest {
     }
 
     @Test
-    void newHerogetName_true() throws Exception {
+    void newHerogetName_String() throws Exception {
         Hero hero = Hero.setUpNewHero();
         assertEquals("SuperMan",hero.getName());
     }
 
     @Test
-    void newHerogetAge_true() throws Exception {
+    void newHerogetAge_Int() throws Exception {
         Hero hero = Hero.setUpNewHero();
         assertEquals(34,hero.getAge());
     }
 
     @Test
-    void newHerogetSpecialPower_true() throws Exception {
+    void newHerogetSpecialPower_String() throws Exception {
         Hero hero = Hero.setUpNewHero();
         assertEquals("Speed",hero.getSpecialPower());
     }
 
     @Test
-    void nwHerogetWeakness_true() throws Exception {
+    void nwHerogetWeakness_String() throws Exception {
         Hero hero = Hero.setUpNewHero();
         assertEquals("Magic",hero.getWeakness());
     }
 
     @Test
-    void newHerogetId_true() throws Exception {
+    void newHerogetId_Int() throws Exception {
         Hero.clearAllHeroes();
         Hero hero = Hero.setUpNewHero();
         assertEquals(1, hero.getId());
@@ -66,26 +66,6 @@ class HeroTest {
     void findById() {
         Hero hero = Hero.setUpNewHero();
         assertEquals(1, Hero.findById(hero.getId()).getId());
-    }
-    @Test
-    void update()throws Exception {
-        Hero hero = Hero.setUpNewHero();
-        String formerName = hero.getName();
-        int formerId = hero.getId();
-        String formerSpecialPower = hero.getSpecialPower();
-        String formerWeakness = hero.getWeakness();
-        int formerAge = hero.getAge();
-
-        hero.update("Superman",24,"lazers","fire");
-        assertEquals(formerId, hero.getId());
-        assertNotEquals(formerName, hero.getName());
-        assertNotEquals(formerSpecialPower, hero.getSpecialPower());
-        assertNotEquals(formerWeakness, hero.getWeakness());
-        assertNotEquals(formerAge, hero.getAge());
-
-
-
-
     }
     @Test
     void deleteSpecificHero() throws Exception {

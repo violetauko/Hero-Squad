@@ -52,6 +52,7 @@ width: 50%;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  color:white;
 }
 input[type=number]{
 width: 50%;
@@ -61,5 +62,61 @@ width: 50%;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  color:white;
+}
+input[type=submit] {
+  width: 20%;
+  background-color: white;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+input[type=submit]:hover{
+background-color:#EC833B;
+}
+.squad-form{
+color:#EC833B;
+margin-left:30%;
+}
+.success{
+color:white;
+text-align:center;
+padding-top:10%;
+}
+.success>a{
+background-color:#EC833B;
+border-radius:30px;
+padding:10px;
+font-size:2em;
+}
+.success>a:hover{
+background-color:white;
+}
+.hero-detail{
+color:white;
+text-align:center;
+}
+.shadow>a{
+background-color:#EC833B;
+border-radius:30px;
+padding:8px;
+}
+.shadow>a:hover{
+background-color:white;
+}
+.hero-btn>a{
+background-color:#EC833B;
+border-radius:30px;
+padding:10px;
+}
+.squad-detail{
+color:white;
+text-align:center;
+}
+h3{
+color:#EC833B;
 }
 

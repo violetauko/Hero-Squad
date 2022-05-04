@@ -1,12 +1,13 @@
 {{#partial "content"}}
 
+    <div class="container-fluid">
         <div class="success">
+            <h3>Congratulations!!<br> your creation is <br>Successful </h3>
 
-            <h3>Success <br>  <span>{{ item }} </span> <br> Has been created <br>{{sqId}}</h3>
-
-            <a class="btns btn-green" href="/hero-detail">View Heroes</a>
-            <a class="btns btn-green" href="/squad-detail">View Squads</a>
-
+            <a href="/hero-detail"><button class="btn">View Heroes</button></a>
+            <a href="/squad-detail"><button class="btn">View Squads</button></a>
         </div>
+    </div>
+
 {{/partial}}
 {{> layout.hbs}}

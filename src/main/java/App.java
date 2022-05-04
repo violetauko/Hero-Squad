@@ -22,30 +22,30 @@ public class App {
             Map<String, Object> model = new HashMap<>();
             return new ModelAndView(model,"index.hbs");
         }, new HandlebarsTemplateEngine());
-
+// show new hero form
         get("/hero-form",(request, response) ->{
             Map<String, Object> model = new HashMap<>();
             return new ModelAndView(model, "hero-form.hbs");
         }, new HandlebarsTemplateEngine());
 
+//process hero form
+        post("/hero/new",(req, res) ->{
+            Map<String, Object> model = new HashMap<>();
+            String name = req.queryParams("name");
+            Integer age = Integer.valueOf(req.queryParams("age"));
+            String specialPower = req.queryParams("specialPower");
+            String weakness = req.queryParams("weakness");
+            Hero hero = new Hero(name,age,specialPower,weakness);
+            model.put("hero",hero);
+            return new ModelAndView(model, "success.hbs");
+        }, new HandlebarsTemplateEngine());
+
+//display
         get("/hero-detail", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             ArrayList<Hero> hero = Hero.getAll();
             model.put("hero", hero);
             return new ModelAndView(model, "hero-detail.hbs");
-        }, new HandlebarsTemplateEngine());
-
-        post("/hero/new",(req, res) ->{
-            Map<String, Object> model = new HashMap<>();
-            String name = req.queryParams("name");
-            Integer age = Integer.parseInt(req.queryParams("age"));
-            String specialPower = req.queryParams("specialPower");
-            String weakness = req.queryParams("weakness");
-            Hero hero = new Hero(name,age,specialPower,weakness);
-            req.session().attribute("item",name);
-            model.put("item",req.session().attribute("item"));
-            model.put("hero",hero);
-            return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
 
         get("/squad-form",(req, res) ->{
@@ -84,7 +84,7 @@ public class App {
             return new ModelAndView(model, "success.hbs");
         },new HandlebarsTemplateEngine());
 
-        post("/squad/new/:id",(req,res)->{
+        get("/squad/new/:id",(req,res)->{
             Map<String, Object> model = new HashMap<>();
             int id= Integer.parseInt(req.params("id"));
             Hero hero = Hero.findById(id);

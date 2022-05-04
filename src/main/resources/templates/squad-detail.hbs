@@ -1,37 +1,29 @@
 {{#partial "content"}}
 
+    <div class="container-fluid">
     {{#each squads}}
-        <div class="squad-cont">
-        <div>
-            <h1>{{ name }} </h1>
-            <p>Purpose: {{cause}}</p>
-            <p>Max participants: {{ size }}</p>
+        <div class="squad-detail">
+            <h3>Squad Details</h3><br>
+            <p>Squad Name:{{ name }} </p>
+            <p>Cause: {{cause}}</p>
+            <p>Max Members: {{ size }}</p>
             <p>Id: {{squadId}}</p>
             <br><br>
             <h5>Members of {{name}} Squad</h5>
-        {{#each members}}
-                <div class="member-cont">
-                    <h5>Name: {{this.name}}</h5>
-                    <h5>Power: {{power}}</h5>
-                    <Button class="btn">Remove</Button>
-                </div>
-        {{/each}}
-        </div>
         </div>
         {{/each}}
-<div class="squad">
-    <div id="newMember">
+   <div class="squad-member">
         {{#each heroes}}
-            <div class="hero-item">
-                <img src="/img/DIAMONDHEAD06_4C.png" alt="">
                 <div class="hero-detail">
                     <p>Name: {{name}}</p>
-                    <p>Super power: {{ specialPower }}</p>
+                    <p>Age: {{age}}</p>
+                    <p>Special power: {{specialPower}}</p>
+                    <p>Weakness: {{weakness}}</p>
                 </div>
-            </div>
         {{/each}}
     </div>
-</div>
+    </div>
+
 {{/partial}}
 
 {{> layout.hbs}}
